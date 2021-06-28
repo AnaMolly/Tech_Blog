@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const { Post } = require('../../models');
+const withAuth = require ('../../utils/auth')
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
       try {
         const postData = await Post.create({
             post_title: req.body.post_title,
             post_content: req.body.post_content,
-            // user_id: 
+            user_id: req.session.user_id
         });
         res.status(200).json(postData);
       } catch (err) {
