@@ -13,14 +13,14 @@
       <h1>
         Welcome to The Tech Blog!
       </h1>
-      {{!-- <nav>
+      <nav>
         {{#if loggedIn}}
         <a href="/">Dashboard</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
-      </nav> --}}
+      </nav>
     </header>
     <main class="container container-fluid mt-5">
     {{{ body }}} 
@@ -30,10 +30,9 @@
     </footer>
   </div>
 
-  <!-- Render script for logged in users only -->
-  {{!-- {{#if loggedIn}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
-  {{/if}} --}}
+  {{/if}} 
 </body>
 
 </html>
