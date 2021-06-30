@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 
   res.json({
     posts
-    //loggedIn: req.session.loggedIn,
+    loggedIn: req.session.loggedIn,
   });
 } catch (err) {
   res.status(500).json(err);
