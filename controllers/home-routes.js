@@ -23,7 +23,10 @@ router.get('/post/:id',   async (req, res) => {
     const PostData = await Post.findByPk(req.params.id);
     const post = PostData.get({ plain: true });
     console.log(post)
-    res.status(200).render('editpost',{post})
+    res.status(200).render('editpost',{
+      post,
+      loggedIn: req.session.loggedIn
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
