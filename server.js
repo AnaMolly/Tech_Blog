@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {maxAge: 3600},
+  cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -23,11 +23,10 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create();
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.set('views',path.join(__dirname,'views'))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

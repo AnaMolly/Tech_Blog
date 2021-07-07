@@ -6,23 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        Welcome to The Tech Blog!
-      </h1>
-      <nav>
+  <div>
+    <header>
+      <nav id="navbar" style="display:flex;justify-content:flex-end; background-color:rgb(235, 187, 29); padding:20px">
+        <a href="/">HOME</a> 
+        <a href="/dashboard">DASHBOARD</a> 
         {{#if loggedIn}}
-        <a href="/">Home</a> 
-        <a href="/dashboard">Dashboard</a> 
-        <button class="no-button" id="logout">Logout</button>
+        <button class="no-button" id="logout" >LOGOUT</button>
         {{else}}
-        <a href="/">Home</a> 
-        <a href="/dashboard">Dashboard</a> 
-        <a href="/login">Login</a>
+        <a href="/login">LOGIN</a>
         {{/if}}
       </nav>
     </header>
@@ -35,7 +31,7 @@
   </div>
 
   {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
+  <script src="js/logout.js"></script>
   {{/if}} 
 </body>
 
