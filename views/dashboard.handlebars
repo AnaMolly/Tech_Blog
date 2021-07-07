@@ -1,14 +1,13 @@
 <div>
-    <h1> Your Posts </h1>
+    <h1 style="margin-bottom:30px"> Your Posts </h1>
     {{#each posts as |post|}}
-    <div class="card" style="width: 18rem;" id={{post.id}}>
+    <div class="card" style="width: 18rem; margin:40px 0px 40px 0px" id="{{post.id}}" >
         <div class="card-body">
             <h5 class="card-title">{{post.post_title}}</h5>
             <p class="card-text">{{post.post_content}}</p>
-            <p>{{post.createdAt}}</p>
-            <a href="#" class="btn btn-primary">Edit Post</a>
+             <p>Created on <strong>{{format_date post.createdAt}}</strong> 
         </div>
     </div>
     {{/each}}
-     <a href="">Add New Post</a>
+     <a href="#" class="btn btn-primary"style="margin-top:20px">Add New Post</a>
 </div>

@@ -29,11 +29,14 @@ Comment.init(
         model: 'user',
         key: 'id',
         },
-    }
+    },
+    createdAt: {
+        type: DataTypes.DATE,
+        field: 'created_at'
+      }
 },
 {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'comment',
