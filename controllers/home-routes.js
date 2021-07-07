@@ -18,6 +18,20 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/post/:id',   async (req, res) => {
+  try {
+    const PostData = await Post.findByPk(req.params.id);
+    const post = PostData.get({ plain: true });
+    console.log(post)
+    res.status(200).render('editpost',{post})
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+
+});
+
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/homepage');
