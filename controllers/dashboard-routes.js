@@ -21,6 +21,17 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/addpost', async (req, res) => {
+  try {
+  res.render('addpost', {
+    loggedIn: req.session.loggedIn
+  });
+} catch (err) {
+  res.status(400).json(err);
+}
+});
+
+
 router.get('/:id', async (req, res) => {
     try {
       const postData = await Post.findOne(

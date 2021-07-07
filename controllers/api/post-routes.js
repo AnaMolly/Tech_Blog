@@ -8,10 +8,7 @@ router.post('/', async (req, res) => {
             post_title: req.body.post_title,
             post_content: req.body.post_content,
             user_id: req.session.user_id
-        });
-        req.session.save(() => {
-          req.session.loggedIn = true;  
-        });
+        })
         res.status(200).json(postData);
       } catch (err) {
         res.status(400).json(err);
