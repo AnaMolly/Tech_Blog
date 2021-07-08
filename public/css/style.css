@@ -9,3 +9,91 @@ body{
     color:rgb(0, 0, 0);
     letter-spacing: 1.5px;
 }
+
+.post-title{
+    color:black; 
+    font-weight: 300; 
+    font-size:25px;
+    background-color:rgb(235, 187, 29)
+}
+.cards{
+    padding: 12px 20px 0px 20px; 
+    margin:0px; 
+    font-size:25px
+}
+.created-by{
+    padding: 12px 20px 12px 20px; 
+    margin:0px; 
+    font-size:18px;
+    color:gray;
+    font-style: italic;
+}
+.comment{
+    padding: 12px 20px 12px 20px; 
+    border: thin solid rgb(204, 208, 211);
+    margin: 7px 0px 7px 0px;
+    font-size: 18px;
+}
+
+.comment-created-by{
+    margin:0px;
+    font-style: italic;
+    color: gray;
+    font-size: 12px;
+}
+
+.comment-text{
+    margin-bottom:6px
+}
+
+.login-but{
+    background-color: rgb(235, 187, 29);
+    color: #000;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    border:none
+}
+
+.login-con{
+    padding:35px;
+    display: block;
+    border: thin solid rgb(204, 208, 211);
+    margin:15px
+
+}
+
+.login-title{
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    padding-bottom:20px
+}
+.login-but{
+   display: block;
+   margin:0 auto;
+   margin-top:30px
+}
+
+.new-post-but{
+    background-color: rgb(235, 187, 29);
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 20px;
+    border:none;
+    padding:10px
+
+}
+
+.edit-post-title{
+    margin: 15px 0px 0px 0px;
+    font-size: 25px;
+}
+
+.edit-but{
+    background-color: rgb(235, 187, 29);
+    color: #000;
+    font-size: 18px;
+    border:none;
+    padding:10px;
+    margin:10px 10px 10px 0px
+}

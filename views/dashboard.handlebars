@@ -1,18 +1,19 @@
 <div >
+     <h1 style="font-weight:200; letter-spacing:2px; padding: 10px 45px 45px 45px; text-align:center; font-size:60px">DASHBOARD</h1>
     <h1 style="margin-bottom:30px"> Your Posts </h1>
     <div  class="postlist">
         {{#each posts as |post|}}
          <div class="card dashboard-post" style="width: 52rem; margin:40px 0px 40px 0px">
             <div class="card">
-               <a href="/post/{{post.id}}"> <h5 class="card-header">{{post.post_title}}</h5></a> 
-                <p class="card-text" style="padding: 12px 20px 12px 20px; margin:0px">{{post.post_content}}</p>
-                <p class="card-text" style="padding: 12px 20px 12px 20px; margin:0px">Created on <strong>{{format_date post.createdAt}}</strong> 
+               <a href="/post/{{post.id}}"> <p class="card-header post-title">{{post.post_title}}</p></a> 
+                <p class="card-text cards" style="padding: 12px 20px 12px 20px; margin:0px">{{post.post_content}}</p>
+                <p class="card-text created-by" style="padding: 12px 20px 12px 20px; margin:0px">Created on <strong>{{format_date post.createdAt}}</strong> 
             </div>
         </div>
     {{/each}}
     </div>
     
-     <a href="/addpost" class="btn btn-primary"style="margin-top:20px">Add New Post</a>
+     <a href="/addpost" class="btn btn-primary new-post-but"style="margin:10px 0px 30px 0px">Add New Post</a>
 
 
 

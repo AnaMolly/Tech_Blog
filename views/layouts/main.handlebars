@@ -11,8 +11,9 @@
 
 <body>
   <div>
-    <header>
-      <nav id="navbar" style="display:flex;justify-content:flex-end; background-color:rgb(235, 187, 29); padding:20px">
+    <header style="display: flex; justify-content:space-between; align-items:center; background-color:rgb(235, 187, 29)">
+      <a href="/"><h1 style="color: black; padding: 8px 20px 8px 20px; margin:0px">TB</h1></a>
+      <nav id="navbar" style=" align-items:center; background-color:rgb(235, 187, 29); padding:20px">
         <a href="/">HOME</a> 
         <a href="/dashboard">DASHBOARD</a> 
         {{#if loggedIn}}
@@ -22,7 +23,6 @@
         {{/if}}
       </nav>
     </header>
-    <h1 style="font-weight:200; letter-spacing:2px; padding: 45px 45px 10px 45px">TECH BLOG</h1>
     <main class="container container-fluid mt-5">
     {{{ body }}} 
     </main>

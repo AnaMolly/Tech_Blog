@@ -1,16 +1,16 @@
 <div>
-    <h1>Edit Your Post:</h1>
+    <h1 style="padding-bottom:20px">Edit Your Post:</h1>
 <form class="edit-post-but" id="{{post.id}}">
-  <div class="form-group">
-    <label for="posttitle">Post Title:</label>
-    <textarea name="" id="post-title-edit" cols="30" rows="3">{{post.post_title}}</textarea>
+  <div>
+    <p class="edit-post-title">Post Title:</p>
+    <textarea name="" id="post-title-edit" cols="50" rows="3" style="border:thin solid rgb(204, 208, 211)">{{post.post_title}}</textarea>
   </div>
-  <div class="form-group">
-    <label for="postcontent">Post Content:</label>
-    <textarea name="" id="post-content-edit" cols="30" rows="5">{{post.post_content}}</textarea>
+  <div>
+    <p class="edit-post-title">Post Content:</p>
+    <textarea name="" id="post-content-edit" cols="50" rows="5" style="border:thin solid rgb(204, 208, 211)">{{post.post_content}}</textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Save Post</button>
-  <button type="submit" class="btn btn-primary delete-but">Delete Post</button>
+  <button type="submit" class="btn btn-primary edit-but">Save Post</button>
+  <button type="submit" class="btn btn-primary delete-but edit-but">Delete Post</button>
 </form>
 <script src="/js/edit-post.js"></script>
 </div>

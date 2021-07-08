@@ -1,10 +1,11 @@
+ <h1 style="font-weight:200; letter-spacing:2px; padding: 10px 45px 45px 45px; text-align:center; font-size:60px">TECH BLOG</h1>
 <ul class="post-list">
      {{#each posts as |post|}}
         <div class="card" style="width: 52rem; margin:40px 0px 40px 0px">
             <div class="card">
-                <a href="/{{post.id}}"> <h5 class="card-header" id="{{post.id}}">{{post.post_title}}</h5></a> 
-                <p class="card-text" style="padding: 12px 20px 12px 20px; margin:0px">{{post.post_content}}</p>
-                <p class="card-text" style="padding: 12px 20px 12px 20px; margin:0px">Created by <strong>{{user.username}}</strong> on <strong>{{format_date post.createdAt}}</strong> </p>
+                <a href="/{{post.id}}"> <p class="card-header post-title" id="{{post.id}}">{{post.post_title}}</p></a> 
+                <p class="card-text cards" style="">{{post.post_content}}</p>
+                <p class="card-text created-by">Created by <strong>{{user.username}}</strong> on <strong>{{format_date post.createdAt}}</strong> </p>
             </div>
         </div>
     {{/each}}
