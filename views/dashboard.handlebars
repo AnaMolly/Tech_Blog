@@ -2,11 +2,9 @@
     <h1 style="margin-bottom:30px"> Your Posts </h1>
     <div  class="postlist">
         {{#each posts as |post|}}
-         <div class="card dashboard-post" style="width: 18rem; margin:40px 0px 40px 0px">
-            <div class="card-body" id="{{post.id}}">
-               <a href="/post/{{post.id}}">
-<h5 class="card-title" id="{{post.id}}">{{post.post_title}}</h5>
-               </a> 
+         <div class="card dashboard-post" style="width: 52rem; margin:40px 0px 40px 0px">
+            <div class="card-body">
+               <a href="/post/{{post.id}}"> <h5 class="card-title">{{post.post_title}}</h5></a> 
                 <p class="card-text">{{post.post_content}}</p>
                 <p>Created on <strong>{{format_date post.createdAt}}</strong> 
             </div>
@@ -14,7 +12,7 @@
     {{/each}}
     </div>
     
-     <a href="/dashboard/addpost" class="btn btn-primary"style="margin-top:20px">Add New Post</a>
+     <a href="/addpost" class="btn btn-primary"style="margin-top:20px">Add New Post</a>
 
 
 

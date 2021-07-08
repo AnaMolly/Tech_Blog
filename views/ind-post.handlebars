@@ -1,0 +1,33 @@
+<div>
+    <div class="card" style="width: 52rem; margin:40px 0px 40px 0px">
+            <div class="card-body">
+               <h3 class="title" id="{{post.id}}">{{post.post_title}}</h3>
+                <p class="text">{{post.post_content}}</p>
+                <p>Created by <strong>{{user.username}}</strong> on <strong>{{format_date post.createdAt}}</strong> </p>
+            </div>
+    </div>
+    <div class="comments">
+        <h3>Comments:</h3>
+   {{#each post.comments}}
+      <div class="comment">
+          <div class="text">
+            {{comment_content}}
+         </div>
+         <h6>
+            Posted by {{user.username}} on {{format_date createdAt}}
+         </h6>
+      </div>
+   {{/each}}
+    </div>
+    <form class="comment-form">
+        <div class="form-group">
+            <input type="text" class="form-control" id="comment-content" placeholder="Enter comment here...">
+            <button type="submit" class="btn btn-primary">Post Comment</button>
+        </div>
+    </form>
+   
+    <script src="/js/add-comment.js"></script>
+</div>
+        
+
+

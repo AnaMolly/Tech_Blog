@@ -1,12 +1,11 @@
 <ul class="post-list">
      {{#each posts as |post|}}
-        <div class="card" style="width: 18rem; margin:40px 0px 40px 0px" id="{{post.id}}">
+        <div class="card" style="width: 52rem; margin:40px 0px 40px 0px">
             <div class="card-body">
-            <h5 class="card-title">{{post.post_title}}</h5>
-            <p class="card-text">{{post.post_content}}</p>
-            <p>Created by <strong>{{user.username}}</strong> on <strong>{{format_date post.createdAt}}</strong> 
-            </p>
+                <a href="/{{post.id}}"> <h5 class="card-title" id="{{post.id}}">{{post.post_title}}</h5></a> 
+                <p class="card-text">{{post.post_content}}</p>
+                <p>Created by <strong>{{user.username}}</strong> on <strong>{{format_date post.createdAt}}</strong> </p>
+            </div>
         </div>
-    </div>
     {{/each}}
 </ul>
