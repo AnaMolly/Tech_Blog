@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models');
-
+const withAuth = require ('../utils/auth')
 
 router.get('/', async (req, res) => {
   try {
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const dbpostData = await Post.findAll({
       where: {
@@ -35,7 +35,7 @@ router.get('/dashboard', async (req, res) => {
   }
 });
 
-router.get('/addpost', async (req, res) => {
+router.get('/addpost', withAuth, async (req, res) => {
   try {
     res.render('addpost', {
       loggedIn: req.session.loggedIn
@@ -54,7 +54,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const postDatas = await Post.findByPk(req.params.id,
       {
@@ -76,7 +76,7 @@ console.log(post)
   }
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id);
     const post = postData.get({ plain: true });
