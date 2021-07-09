@@ -4,7 +4,7 @@
 
   ## Description
   This application is a CMS-style blog site where users can publish their blog posts and comment on other users' posts. The structure of this blog follows the MVC paradigm in terms of its structure. It uses Handlebars.js as the templating language, Sequelize as the ORM and express-session package for authentication. Bootstrap and CSS were used for the design of the Tech Blog.
-  ![]()
+
 
   # Table of Contents
   - [Installation Instructions](#installation-instructions)
@@ -19,6 +19,7 @@
 
   # Usage
   Run "npm run start" to start the application. The deployed version can be accessed through the above link.
+  ![](./public/images/screenshot.png)
 
   # Tests
   There are no tests included for this application.
