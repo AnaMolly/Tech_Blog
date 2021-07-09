@@ -19,7 +19,7 @@
 
   # Usage
   Run "npm run start" to start the application. The deployed version can be accessed through the above link.
-  ![](./public/images/screenshot.png)
+  ![](./public/images/screenshot1.png)
 
   # Tests
   There are no tests included for this application.
