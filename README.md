@@ -5,6 +5,8 @@
   ## Description
   This application is a CMS-style blog site where users can publish their blog posts and comment on other users' posts. The structure of this blog follows the MVC paradigm in terms of its structure. It uses Handlebars.js as the templating language, Sequelize as the ORM and express-session package for authentication. Bootstrap and CSS were used for the design of the Tech Blog.
 
+  ## Deployed application: https://ancient-earth-72402.herokuapp.com/
+
 
   # Table of Contents
   - [Installation Instructions](#installation-instructions)
