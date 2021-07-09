@@ -1,0 +1,18 @@
+[
+    {
+        "comment_content": "CSS is so much fun, but aligning containers can be tough sometimes.",
+        "user_id": "3",
+        "post_id": "1"
+
+    },
+    {
+        "comment_content": "Bootstrap is awesome!",
+        "user_id": "1",
+        "post_id": "2"
+    },
+    {
+        "comment_content": "MySQL is a great tool! I use it all the time.",
+        "user_id": "2",
+        "post_id": "3"
+    }
+]

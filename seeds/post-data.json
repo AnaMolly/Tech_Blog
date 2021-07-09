@@ -1,0 +1,17 @@
+[
+    {
+        "post_title": "Love for CSS",
+        "post_content": "I love CSS, I just understand it so well!",
+        "user_id": "1"
+    },
+    {
+        "post_title": "Bootstrap",
+        "post_content": "Bootstrap makes styling so easy! I find that it really speeds up the front-end development.",
+        "user_id": "2"
+    },
+    {
+        "post_title": "mySQL",
+        "post_content": "MySQL is pretty useful, despite being an older piece of software.",
+        "user_id": "3"
+    }
+]
